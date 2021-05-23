@@ -13,7 +13,7 @@ In all 6 of the directories under the root directory, run:
 
 Please note: this is not a robust full application- it is only a preview of microservices architecture and does not use containerization.
 
-## Basic Structure:
+## Basic Structure
 
 The client uses React for the front end. Creating a post will send a request to the "posts" service, which will emit an event to the event bus. The event bus will then reach out to all other services- comments, query, and moderation to communicate this event. The event bus keeps track of all events fired in a local data structure as well (in order to allow event syncing for the query service).
 Creating a comment will also cause the event-bus to fire this event, which, along with any posts, will be sent to the query service to keep track of the posts and all subsequent comments. This allows for more efficient data retrieval for allowing the client to receive all post and comment data from ONLY the query service.
@@ -21,4 +21,4 @@ The moderation service handles the logic for determing which comments can stay a
 
 ## Acknowledgements
 
-This project is based off of Stephen Grider's Microservices Udemy course: https://www.udemy.com/course/microservices-with-node-js-and-react/.
+This project is based off of Stephen Grider's Microservices with Node JS and React Udemy course: https://www.udemy.com/course/microservices-with-node-js-and-react/.
