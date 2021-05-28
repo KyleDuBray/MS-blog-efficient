@@ -30,7 +30,7 @@ For Mac/Linux:
 in /etc/hosts add:
 ### `127.0.0.1 posts.com`
 
-*If you are using minikube, run `minkkube ip` to determine the correct ip instead of 127.0.0.1.
+*If you are using minikube, run `minikube ip` to determine the correct ip instead of 127.0.0.1.
 
 ## Scripts
 
